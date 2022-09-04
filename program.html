@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+
+    <!-- GG font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Flexible</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+
+      html {
+        font-family: "Monsterat", sans-serif;
+        font-size: 62.5%;
+      }
+
+      body {
+        color: #707070;
+      }
+      /*****************************/
+      /* Header */
+      /*****************************/
+
+      .header {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 8rem;
+        border-bottom: 1px solid #000;
+      }
+
+      .header img {
+        width: 18rem;
+        height: auto;
+      }
+
+      .header .nav-list {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .header .nav-list ul {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+      }
+
+      .header .nav-list ul a,
+      .header .login a {
+        color: #555;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .header .login a {
+        color: #fff;
+      }
+
+      .header .login {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .header .login .btn {
+        padding: 0.5rem 1.6rem;
+        border-radius: 3px;
+      }
+
+      .header .login .sin {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        color: #555;
+      }
+
+      .header .login .sup {
+        border: 1px solid #222;
+        background-color: #222;
+        color: #fff;
+      }
+
+      .header .nav-list i {
+        font-size: 2rem;
+        color: #555;
+      }
+
+      /*************************************/
+      /* Section shop */
+      /*************************************/
+
+      .container h3 {
+        font-size: 3.6rem;
+        font-weight: bold;
+        margin: 6rem 0;
+      }
+
+      .container .box-inner {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .container .box-inner i {
+        font-size: 2rem;
+      }
+
+      .container .box-inner .box {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .container .box-inner .box p {
+        font-size: 1.6rem;
+      }
+
+      .container .box-inner .filter {
+        display: inline-block;
+        padding: 1.1rem 2.6rem;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      .container .box-inner .search {
+        display: inline-block;
+        padding: 1.1rem 2.6rem;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+
+      .container-shop-menu {
+        background-color: #e6e6e6;
+      }
+
+      .shop-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8rem 0px;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .shop-menu h3 {
+        align-self: flex-start;
+        font-size: 3.6rem;
+        font-weight: bold;
+        margin-bottom: 3rem;
+      }
+
+      .shop-menu .grid-col3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10rem;
+        row-gap: 20rem;
+      }
+
+      .grid-col3 .product {
+        text-align: center;
+        background-color: #fff;
+      }
+
+      .grid-col3 .product p {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+      }
+
+      .number-page {
+        display: flex;
+        gap: 3rem;
+        font-weight: 600;
+        padding-top: 5rem;
+        font-size: 1.6rem;
+      }
+
+      .number-page a {
+        color: #555;
+      }
+
+      .number-page a:hover {
+        color: #339af0;
+      }
+
+      /*********************************/
+      /* Footer */
+      /*********************************/
+
+      footer {
+        background-color: #343434;
+      }
+
+      .footer {
+        position: relative;
+        padding: 10rem 0rem;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .footer-logo {
+        background-color: #343434;
+      }
+
+      .footer-text {
+        color: #fff;
+        list-style: none;
+        padding-bottom: 1.5rem;
+      }
+
+      .footer-text a {
+        color: #fff;
+
+        transition: color 0.3s;
+      }
+
+      .footer-text a:hover {
+        color: #74c0fc;
+      }
+
+      .footer-text p {
+        font-size: 2.4rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+      }
+
+      .footer-text li {
+        font-size: 1.6rem;
+        padding: 1rem 0;
+      }
+
+      .footer-text-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 15rem;
+      }
+
+      .footer-text-2 .social-logo {
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .footer-text-2 .social-logo i {
+        font-size: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="header">
+        <a href="home.html"><img src="imgs/logo.png" alt="" /></a>
+        <div class="nav-list">
+          <ul>
+            <li><a href="introduce.html">Giới thiệu</a></li>
+            <li><a href="program.html">Các chương trình</a></li>
+            <li><a href="community.html">Cộng đồng</a></li>
+            <li><a href="training.html">Tập luyện</a></li>
+            <li><a href="#">Lối sống lành mạnh</a></li>
+            <li><a href="shop.html">Cửa hàng</a></li>
+          </ul>
+          <div class="login">
+            <a href="signin.html" class="btn sin">Đăng nhập</a>
+            <a href="signup.html" class="btn sup">Đăng ký</a>
+          </div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Section Shop -->
+    <section class="section-shop">
+      <div class="container">
+        <h3>Các chương trình</h3>
+        <div class="box-inner">
+          <div class="filter">
+            <div class="box">
+              <i class="fa-sharp fa-solid fa-filter"></i>
+              <p>Bộ lọc</p>
+              <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="search">
+            <div class="box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>Tìm kiếm</p>
+              <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="new">
+            <div class="box">
+              <p>Mới nhất</p>
+              <i class="fa-sharp fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-shop-menu">
+        <div class="shop-menu">
+          <div class="grid-col3">
+            <div class="product">
+              <img src="img/p1.jpg" alt="" />
+            </div>
+            <div class="product">
+              <img src="img/p2.png" alt="" />
+            </div>
+            <div class="product">
+              <img src="img/p1.jpg" alt="" />
+            </div>
+            <div class="product">
+              <img src="img/p2.png" alt="" />
+            </div>
+            <div class="product">
+              <img src="img/p1.jpg" alt="" />
+            </div>
+            <div class="product">
+              <img src="img/p2.png" alt="" />
+            </div>
+            <div class="product">
+              <img src="img/p1.jpg" alt="" />
+            </div>
+            <div class="product">
+              <img src="img/p2.png" alt="" />
+            </div>
+            <div class="product">
+              <img src="img/p1.jpg" alt="" />
+            </div>
+          </div>
+          <div class="number-page">
+            <a href="#1">1</a>
+            <a href="#2">2</a>
+            <a href="#3">3</a>
+            <p>...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="imgs/footer-logo.png" alt="" />
+        </div>
+        <div class="footer-text">
+          <p>Về chúng tôi</p>
+          <li><a href="introduce.html">Giới thiệu</a></li>
+          <li><a href="learnmore.html">Đội ngũ của chúng tôi</a></li>
+        </div>
+        <div class="footer-text">
+          <p>Lối sống lành mạnh</p>
+          <li><a href="cooking.html">Công thức nấu ăn</a></li>
+          <li><a href="#">Sức khỏe video</a></li>
+          <li><a href="news.html">Các bài báo của chuyên gia</a></li>
+        </div>
+        <div class="footer-text footer-text-2">
+          <div class="footer-text-top">
+            <p>Cộng đồng</p>
+            <li><a href="community.html">Cộng đồng</a></li>
+            <li><a href="#">Blog</a></li>
+          </div>
+          <div class="social-logo">
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

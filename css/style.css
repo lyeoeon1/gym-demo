@@ -1,0 +1,309 @@
+/* 
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-family: "Monsterat", sans-serif;
+  font-size: 62.5%;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+  border-bottom: 1px solid #000;
+}
+
+.header img {
+  width: 18rem;
+  height: auto;
+}
+
+.header .nav-list {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.header .nav-list ul {
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+}
+
+.header .nav-list ul a,
+.header .login a {
+  color: #555;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.header .login a {
+  color: #fff;
+}
+
+.header .login {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.header .login .btn {
+  padding: 0.5rem 1.6rem;
+  border-radius: 3px;
+}
+
+.header .login .sin {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #555;
+}
+
+.header .login .sup {
+  border: 1px solid #222;
+  background-color: #222;
+  color: #fff;
+}
+
+.header .nav-list i {
+  font-size: 2rem;
+  color: #555;
+}
+
+/* Section hero */
+.section-hero {
+  position: relative;
+  width: 100%;
+  height: 63rem;
+}
+
+.hero-text-box {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  transform: translate(0%, -50%);
+}
+
+.hero-text-box h2 {
+  font-size: 6.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: #339af0;
+  color: #fff;
+  padding: 1.2rem 3.2rem;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: #1864ab;
+  color: #fff;
+  padding: 1.2rem 3.2rem;
+  border-radius: 5px;
+}
+
+.btn-hero {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: #2164bc;
+  color: #fff;
+  padding: 1.2rem 3.2rem;
+  border-radius: 5px;
+  margin-top: 3rem;
+}
+
+/* Container 80% */
+.container {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Section 2 */
+.section-2 {
+  margin: 4rem 0;
+}
+
+.grid-col2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.grid-item {
+  position: relative;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.grid-item p {
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  color: #b23294;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Section 3 */
+.section-3 {
+  background-color: #dbdada;
+}
+
+.section-3-box {
+  padding: 3rem;
+  text-align: center;
+}
+
+.section-3-text {
+  color: #707070;
+  margin: 4rem 0;
+}
+
+.section-3-text h3 {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.section-3-text p {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 2.2rem;
+}
+
+.section-3-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.section-3-img div:nth-child(even) {
+  padding-top: 10rem;
+}
+
+/* Section 4 */
+.section-4 {
+  background-color: #c9c9c9;
+  padding: 7rem 0 10rem 0;
+}
+
+.section-4-box {
+  color: #707070;
+}
+
+.section-4-text h3 {
+  font-size: 3.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.section-4-text p {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 5.2rem;
+}
+
+.section-4-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-4-img .img-sec-4 p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* footer */
+footer {
+  background-color: #343434;
+}
+
+.footer {
+  position: relative;
+  padding: 10rem 0rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-logo {
+  background-color: #343434;
+}
+
+.footer-text {
+  color: #fff;
+  list-style: none;
+  padding-bottom: 1.5rem;
+}
+
+.footer-text a {
+  color: #fff;
+
+  transition: color 0.3s;
+}
+
+.footer-text a:hover {
+  color: #74c0fc;
+}
+
+.footer-text p {
+  font-size: 2.4rem;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+.footer-text li {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+.footer-text-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+}
+
+.footer-text-2 .social-logo {
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-text-2 .social-logo i {
+  font-size: 5rem;
+}

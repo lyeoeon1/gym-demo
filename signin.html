@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <title>Đăng nhập</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+      }
+
+      html {
+        font-family: "Monsterat", sans-serif;
+        font-size: 62.5%;
+      }
+
+      body {
+        color: #707070;
+      }
+
+      /* HEADER */
+      .header {
+        width: 100%;
+        height: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 8rem;
+        border-bottom: 1px solid #000;
+      }
+
+      .header img {
+        width: 18rem;
+        height: auto;
+      }
+
+      .header .nav-list {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .header .nav-list ul {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+      }
+
+      .header .nav-list ul a,
+      .header .login a {
+        color: #555;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+
+      .header .login a {
+        color: #fff;
+      }
+
+      .header .login {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .header .login .btn {
+        padding: 0.5rem 1.6rem;
+        border-radius: 3px;
+      }
+
+      .header .login .sin {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        color: #555;
+      }
+
+      .header .login .sup {
+        border: 1px solid #222;
+        background-color: #222;
+        color: #fff;
+      }
+
+      .header .nav-list i {
+        font-size: 2rem;
+        color: #555;
+      }
+
+      /* signin */
+      .section {
+        padding: 10rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container-tow {
+        width: 50%;
+        text-align: center;
+      }
+
+      .heading-tow {
+        padding-bottom: 1.2rem;
+        border-bottom: 2px solid #ccc;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      .heading-tow h2 {
+        width: 100%;
+        font-size: 3.6rem;
+      }
+
+      .container-tow * {
+        font-size: 2.4rem;
+        padding: 0.5rem 0;
+      }
+
+      .signup a {
+        color: #333;
+      }
+
+      .signup a:hover {
+        color: #dd4b39;
+        cursor: pointer;
+      }
+
+      .signin {
+        color: #4a6ea9;
+      }
+
+      .dnb {
+        text-align: start;
+        margin-bottom: 1.2rem;
+      }
+
+      .social-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.2rem;
+      }
+
+      .social-box .fb {
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 5px;
+        background-color: #4a6ea9;
+        padding: 1rem;
+        width: 45%;
+      }
+
+      .social-box .fb:hover {
+        background-color: rgba(74, 110, 169, 0.9);
+      }
+
+      .social-box .gg {
+        cursor: pointer;
+        color: #fff;
+        font-weight: bold;
+        border-radius: 5px;
+        width: 45%;
+        padding: 1rem;
+        background-color: #dd4b39;
+      }
+
+      .social-box .gg:hover {
+        background-color: rgb(221, 75, 57, 0.9);
+      }
+
+      .h {
+        margin-bottom: 1.2rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 1.2rem;
+      }
+
+      form input {
+        height: 6rem;
+        border-radius: 5px;
+        border: 2px solid #ccc;
+        outline-color: #4a6ea9;
+      }
+
+      .box-4 {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+      }
+
+      .box-4 a {
+        color: #333;
+      }
+
+      .box-4 a:hover {
+        color: #4a6ea9;
+      }
+
+      .checkbox {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 2.4rem;
+      }
+
+      .checkbox input {
+        cursor: pointer;
+      }
+
+      .btn-tow {
+        color: #fff;
+        font-weight: bold;
+        display: block;
+        padding: 1rem;
+        border-radius: 5px;
+        background-color: #4ba3ca;
+      }
+
+      .btn-tow:hover {
+        background-color: rgb(75, 163, 202, 0.9);
+      }
+
+      /* footer */
+      footer {
+        background-color: #343434;
+      }
+
+      .footer {
+        position: relative;
+        padding: 10rem 0rem;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      #pass {
+        width: 2rem;
+      }
+
+      .footer-logo {
+        background-color: #343434;
+      }
+
+      .footer-text {
+        color: #fff;
+        list-style: none;
+        padding-bottom: 1.5rem;
+      }
+
+      .footer-text a {
+        color: #fff;
+
+        transition: color 0.3s;
+      }
+
+      .footer-text a:hover {
+        color: #74c0fc;
+      }
+
+      .footer-text p {
+        font-size: 2.4rem;
+        font-weight: 700;
+        padding-bottom: 1.5rem;
+      }
+
+      .footer-text li {
+        font-size: 1.6rem;
+        padding: 1rem 0;
+      }
+
+      .footer-text-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 15rem;
+      }
+
+      .footer-text-2 .social-logo {
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .footer-text-2 .social-logo i {
+        font-size: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="header">
+        <a href="home.html"><img src="imgs/logo.png" alt="" /></a>
+        <div class="nav-list">
+          <ul>
+            <li><a href="introduce.html">Giới thiệu</a></li>
+            <li><a href="program.html">Các chương trình</a></li>
+            <li><a href="community.html">Cộng đồng</a></li>
+            <li><a href="training.html">Tập luyện</a></li>
+            <li><a href="#">Lối sống lành mạnh</a></li>
+            <li><a href="shop.html">Cửa hàng</a></li>
+          </ul>
+          <div class="login">
+            <a href="signin.html" class="btn sin">Đăng nhập</a>
+            <a href="signup.html" class="btn sup">Đăng ký</a>
+          </div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- section signin -->
+    <section class="section">
+      <div class="container-tow">
+        <div class="heading-tow">
+          <h2>Đăng nhập</h2>
+        </div>
+        <br />
+        <p class="dnb">Đăng nhập bằng</p>
+        <div class="social-box">
+          <div class="fb">Facebook</div>
+          <div class="gg">Google</div>
+        </div>
+        <p class="h">Hoặc</p>
+        <form action="#">
+          <input type="email" placeholder="Nhập Email..." />
+          <input type="password" placeholder="Nhập mật khẩu..." />
+        </form>
+        <div class="box-4">
+          <div class="checkbox">
+            <input type="checkbox" id="pass" />
+            <label for="pass"><p>Lưu mật khẩu</p></label>
+          </div>
+          <a href="#">Quên mật khẩu?</a>
+        </div>
+        <a href="#" class="btn-tow">Đăng nhập</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="imgs/footer-logo.png" alt="" />
+        </div>
+        <div class="footer-text">
+          <p>Về chúng tôi</p>
+          <li><a href="introduce.html">Giới thiệu</a></li>
+          <li><a href="learnmore.html">Đội ngũ của chúng tôi</a></li>
+        </div>
+        <div class="footer-text">
+          <p>Lối sống lành mạnh</p>
+          <li><a href="cooking.html">Công thức nấu ăn</a></li>
+          <li><a href="#">Sức khỏe video</a></li>
+          <li><a href="news.html">Các bài báo của chuyên gia</a></li>
+        </div>
+        <div class="footer-text footer-text-2">
+          <div class="footer-text-top">
+            <p>Cộng đồng</p>
+            <li><a href="community.html">Cộng đồng</a></li>
+            <li><a href="#">Blog</a></li>
+          </div>
+          <div class="social-logo">
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
